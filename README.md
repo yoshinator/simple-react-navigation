@@ -24,14 +24,22 @@ Launches the test runner in the interactive watch mode.<br />
 and use it where you need it. 
 ## You MUST pass it an array of link objects even if they don't go anywhere
 ### If you don't an error will be thrown in your application.
+  * If you are using react router you must also pass in a prop called router 
+  * set it equal to true
+  * wrap <SimpleNav /> in <Router>
+  * YOU DO NOT NEED REACT ROUTER FOR SIMPLE NAV TO WORK JUST DON'T PASS IN THE ROUTER PROP AND DON'T WRAP IT IN ROUTER.
+
 ```jsx
-<SimpleNav links={[
-            { href: "#", content: "Home" }, 
-            { href: "#", content: "About" }, 
-            { href: "#", content: "Blog" }, 
-            { href: "#", content: "Contact" }
-          ]}
-/>
+<Router>
+  <SimpleNav links={[
+              { href: "#", content: "Home" }, 
+              { href: "#", content: "About" }, 
+              { href: "#", content: "Blog" }, 
+              { href: "#", content: "Contact" }
+            ]}
+            router={true}
+  />
+</Router>
 ```
 You can also pass it optional colors or logo props. 
 

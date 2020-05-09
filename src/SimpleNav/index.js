@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.css'
+import { Link } from 'react-router-dom';
 
-export const SimpleNav = ({logo, links, colors}) => {
+export const SimpleNav = ({logo, links, colors, router}) => {
 
   const renderLogo = () => {
 
     if (logo){
-      console.log(colors)
       if(logo.img){
         return <h1 className="logo"><img src={logo.img.src} alt={logo.img.alt} /><span>{logo.text}</span></h1>
       } else {
@@ -20,7 +20,9 @@ export const SimpleNav = ({logo, links, colors}) => {
   const renderLinks = ()=> {
     if (links){
       return links.map(link => {
-        return <li key={Date.now() * Math.random()}><a href={link.href}>{link.content}</a></li>
+        return <li key={Date.now() * Math.random()}>
+                   {router ? <Link to={link.href} >{link.content}</Link> : <a href={link.href}>{link.content}</a>}
+                </li>
       })
     } else {
       throw "Must send atleast 1 link"
