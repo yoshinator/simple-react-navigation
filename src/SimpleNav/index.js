@@ -1,5 +1,5 @@
 import React from 'react';
-import './SimpleNav.css'
+import './index.css'
 
 export const SimpleNav = ({logo, links, colors}) => {
 

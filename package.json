@@ -1,7 +1,20 @@
 {
   "name": "simple-nostate-responsive-navigation",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "(ISC OR GPL-3.0)",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "babel": {
+    "presets": [
+      "@babel/react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoshinator/simple-react-navigationt"
+  },
+  
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -14,7 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "SET NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/SimpleNav --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4"
   }
 }
