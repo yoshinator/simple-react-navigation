@@ -26,7 +26,7 @@ and use it where you need it.
 ### If you don't an error will be thrown in your application.
   * If you are using react router you must also pass in a prop called router 
   * set it equal to true
-  * wrap <SimpleNav /> in <Router>
+  * wrap `<SimpleNav />` in `<Router>`
   * YOU DO NOT NEED REACT ROUTER FOR SIMPLE NAV TO WORK JUST DON'T PASS IN THE ROUTER PROP AND DON'T WRAP IT IN ROUTER.
 
 ```jsx
