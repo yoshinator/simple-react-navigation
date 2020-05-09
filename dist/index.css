@@ -78,7 +78,7 @@ header {
 }
 
 .logo span {
-  position: relative;
+  position: absolute;
   left: -100000px;
   top:  -100000px;
 }

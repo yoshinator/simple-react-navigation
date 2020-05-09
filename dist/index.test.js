@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { SimpleNav } from './SimpleNav';
+import { SimpleNav } from './';
 describe('SimpleNav', () => {
   it("Throws an error if no links are passed", () => {
     expect(() => shallow( /*#__PURE__*/React.createElement(SimpleNav, null))).toThrowError();

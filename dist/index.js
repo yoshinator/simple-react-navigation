@@ -1,14 +1,14 @@
 import React from 'react';
 import './index.css';
+import { Link } from 'react-router-dom';
 export const SimpleNav = ({
   logo,
   links,
-  colors
+  colors,
+  router
 }) => {
   const renderLogo = () => {
     if (logo) {
-      console.log(colors);
-
       if (logo.img) {
         return /*#__PURE__*/React.createElement("h1", {
           className: "logo"
@@ -33,7 +33,9 @@ export const SimpleNav = ({
       return links.map(link => {
         return /*#__PURE__*/React.createElement("li", {
           key: Date.now() * Math.random()
-        }, /*#__PURE__*/React.createElement("a", {
+        }, router ? /*#__PURE__*/React.createElement(Link, {
+          to: link.href
+        }, link.content) : /*#__PURE__*/React.createElement("a", {
           href: link.href
         }, link.content));
       });
